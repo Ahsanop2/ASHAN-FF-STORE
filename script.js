@@ -1,6 +1,6 @@
 const accounts = [
-    { title: "Pro Level Account", level: 75, skins: 8000, price: "$100", contact: "https://wa.me/3182898491" },
-    { title: "Elite Pass Account", level: 60, skins: 3000, price: "$70", contact: "https://wa.me/3182898491link" }
+    { title: "Pro Level Account", level: 75, skins: 8000, price: "$100", contact: "https://wa.me/03182898491" },
+    { title: "Elite Pass Account", level: 60, skins: 3000, price: "$70", contact: "https://wa.me/03182898491link" }
 ];
 
 function loadAccounts() {
