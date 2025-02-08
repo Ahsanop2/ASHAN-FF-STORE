@@ -2,7 +2,7 @@ const accounts = [
     { 
         title: "Pro Level Accoun":: "$70", 
         contact: "https://wa.me/923182898491",
-        image: "account2.jpg" 
+        image: "Screenshot_2025-02-05-08-21-52-24_998d3425f9e75a0428f0fabdce419960.jpg" 
     }
 ];
 
