@@ -1,37 +1,99 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-header {
-    background: #333;
-    color: white;
-    padding: 10px;
+
+/* Set background image */
+body {
+    background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
 }
-.account-list {
-    margin-top: 20px;
-}
-.account {
-    background: white;
-    padding: 15px;
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #aaa;
-}
-img {
-    width: 100px;
-    height: 100px;
+
+.container {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
     border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #25d366; /* WhatsApp green color */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #128c7e;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Easypaisa Ad Section */
+.ad-section {
+    background-color: #ff9800; /* Easypaisa Orange background */
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ad-section h2 {
+    font-size: 24px;
     margin-bottom: 10px;
 }
-a {
-    display: inline-block;
-    padding: 10px;
-    background: #28a745;
+
+.ad-section p {
+    font-size: 18px;
+}
+
+.ad-section a {
     color: white;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+}
+
+.ad-section a:hover {
+    text-decoration: underline;
 }
