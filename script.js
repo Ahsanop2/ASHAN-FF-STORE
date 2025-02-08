@@ -3,6 +3,8 @@ const accounts = [
     { title: "Elite Pass Account", level: 60, skins: 3000, price: "pkr3000", contact: "https://wa.me/03182898491" }
 ];
 
+image: "account1.jpg" // ✅ Image file name
+    },
 function loadAccounts() {
     const container = document.getElementById('account-list');
     accounts.forEach(acc => {
