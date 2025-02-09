@@ -3,50 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire ID Buy/Sell</title>
+    <title>Ahsan OP Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Buy/Sell Free Fire IDs</h1>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Ahsan OP Store</h1>
+        </div>
+    </header>
 
-        <!-- Easypaisa Ad Section -->
-        <div class="ad-section">
-            <h2>Pay with Easypaisa</h2>
-            <p>Now you can easily buy Free Fire IDs using **Easypaisa**! For more details, <a href="https://www.easypaisa.com.pk/" target="_blank">click here</a>.</p>
-            <p>Contact: **Rasool Bakhush** at <a href="tel:+923448089399">03448089399</a> for Easypaisa payments.</p>
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2>Buy & Sell Free Fire IDs</h2>
+
+        <!-- Seller Form -->
+        <div class="form-section">
+            <h3>Seller Form</h3>
+            <form action="submit_form.php" method="POST">
+                <label for="seller-name">Name:</label>
+                <input type="text" id="seller-name" name="seller-name" required>
+
+                <label for="id-details">ID Details:</label>
+                <textarea id="id-details" name="id-details" required></textarea>
+
+                <button type="submit">Submit ID</button>
+            </form>
         </div>
 
-        <h2>Seller Form</h2>
-        <form action="https://api.whatsapp.com/send?phone=923448089399" method="get" target="_blank">
-            <label for="level">Level:</label>
-            <input type="text" id="level" name="level" required>
+        <!-- Buyer Form -->
+        <div class="form-section">
+            <h3>Buyer Form</h3>
+            <form action="submit_form.php" method="POST">
+                <label for="buyer-name">Name:</label>
+                <input type="text" id="buyer-name" name="buyer-name" required>
 
-            <label for="evos">Evos:</label>
-            <input type="text" id="evos" name="evos" required>
+                <label for="id-requirements">ID Requirements:</label>
+                <textarea id="id-requirements" name="id-requirements" required></textarea>
 
-            <label for="likes">Likes:</label>
-            <input type="text" id="likes" name="likes" required>
+                <button type="submit">Submit Requirements</button>
+            </form>
+        </div>
 
-            <label for="diamonds">Diamonds:</label>
-            <input type="text" id="diamonds" name="diamonds" required>
+        <!-- WhatsApp Integration -->
+        <div class="whatsapp">
+            <a href="https://wa.me/03182898491" target="_blank">Contact us on WhatsApp</a>
+        </div>
 
-            <label for="price">Price:</label>
-            <input type="text" id="price" name="price" required>
+        <!-- Payment Information -->
+        <div class="payment-info">
+            <p>For Payments, contact us on <strong>Easypaisa</strong>: 03448089399 (Rasool Bakhush)</p>
+        </div>
 
-            <button type="submit">Submit Seller Info</button>
-        </form>
+        <!-- Report Issue -->
+        <div class="report-issue">
+            <p>If you face any issue, please <a href="mailto:alizabutt3257@gmail.com">Email us</a></p>
+        </div>
 
-        <h2>Buyer Form</h2>
-        <form action="https://api.whatsapp.com/send?phone=923448089399" method="get" target="_blank">
-            <label for="id-type">ID Type:</label>
-            <input type="text" id="id-type" name="id-type" required>
-
-            <label for="price-range">Price Range:</label>
-            <input type="text" id="price-range" name="price-range" required>
-
-            <button type="submit">Submit Buyer Info</button>
-        </form>
+        <!-- Live Chat Integration -->
+        <div class="live-chat">
+            <p>Need Help? Chat with us!</p>
+            <a href="https://www.tawk.to/chat/yourchatlink" target="_blank">Open Live Chat</a>
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ahsan OP Store. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
