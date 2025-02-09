@@ -1,99 +1,141 @@
-/* Reset some default styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set background image */
+/* Body and background */
 body {
-    background: url('https://i.imgur.com/QLfE6OM.jpeg') no-repeat center center fixed;
-    background-size: cover;
     font-family: Arial, sans-serif;
-    color: #fff;
-    text-align: center;
-    padding: 50px 0;
+    background-color: #111;
+    color: white;
+    margin: 0;
 }
 
-.container {
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    border-radius: 10px;
+/* Header */
+header {
+    background-color: #222;
     padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
+header h1 {
+    color: #00d1ff; /* Neon blue */
     font-size: 36px;
-    margin-bottom: 30px;
+}
+
+/* Main Content */
+.content {
+    padding: 30px;
 }
 
 h2 {
-    font-size: 24px;
+    color: #ff2a68; /* Neon pink */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
-/* Style the forms */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
 label {
-    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    color: #f0f0f0;
 }
 
-input[type="text"] {
+input, textarea {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
+    background-color: #444;
+    color: white;
 }
 
 button {
-    padding: 10px;
-    background-color: #25d366; /* WhatsApp green color */
+    background-color: #00d1ff; /* Neon blue */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #128c7e;
+    background-color: #ff2a68; /* Neon pink */
 }
 
-button:focus {
-    outline: none;
-}
-
-/* Easypaisa Ad Section */
-.ad-section {
-    background-color: #ff9800; /* Easypaisa Orange background */
-    color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
+/* WhatsApp Link */
+.whatsapp {
     text-align: center;
+    margin-top: 20px;
 }
 
-.ad-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.ad-section p {
+.whatsapp a {
+    color: #25D366;
     font-size: 18px;
-}
-
-.ad-section a {
-    color: white;
-    font-weight: bold;
     text-decoration: none;
 }
 
-.ad-section a:hover {
+.whatsapp a:hover {
     text-decoration: underline;
+}
+
+/* Payment Info */
+.payment-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.payment-info strong {
+    color: #ff2a68;
+}
+
+/* Report Issue */
+.report-issue {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.report-issue a {
+    color: #00d1ff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.report-issue a:hover {
+    text-decoration: underline;
+}
+
+/* Live Chat Link */
+.live-chat {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.live-chat a {
+    color: #ff2a68;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.live-chat a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
 }
