@@ -1,20 +1,31 @@
-// Form Validation
-document.querySelector('form').addEventListener('submit', function(event) {
-    const sellerName = document.getElementById('seller-name').value;
-    const idDetails = document.getElementById('id-details').value;
-    const buyerName = document.getElementById('buyer-name').value;
-    const idRequirements = document.getElementById('id-requirements').value;
+// Basic JavaScript for Form Validation
 
-    if (!sellerName || !idDetails || !buyerName || !idRequirements) {
-        alert("Please fill out all the fields before submitting.");
-        event.preventDefault(); // Prevent form submission
+// Function to validate form fields for a given form ID
+function validateForm(formId) {
+  const form = document.getElementById(formId);
+  const inputs = form.querySelectorAll('input, textarea');
+  
+  for (let input of inputs) {
+    if (!input.value.trim()) {
+      alert('Please fill out all the fields in the form.');
+      return false;
     }
+  }
+  return true;
+}
+
+// Validate Seller Form on submission
+document.getElementById('sellerForm').addEventListener('submit', function(e) {
+  if (!validateForm('sellerForm')) {
+    e.preventDefault(); // Prevent form submission if validation fails
+  }
 });
 
-// Live Chat Integration (Optional: If you want to load chat script dynamically)
-window.onload = function() {
-    const liveChatLink = document.querySelector('.live-chat a');
-    liveChatLink.addEventListener('click', function() {
-        alert('You are about to start a live chat!');
-    });
-}
+// Validate Buyer Form on submission
+document.getElementById('buyerForm').addEventListener('submit', function(e) {
+  if (!validateForm('buyerForm')) {
+    e.preventDefault(); // Prevent form submission if validation fails
+  }
+});
+
+// Additional JavaScript functionality can be added here if needed.
