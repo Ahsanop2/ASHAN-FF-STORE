@@ -1,36 +1,27 @@
-// موجودہ بیلنس کی simulation
-let balance = parseInt(document.getElementById('balance').innerText);
-const withdrawalAmount = 500; // روزانہ ودڈرال کی رقم
+let balance = 100;
+let referralCode = "INV" + Math.floor(Math.random() * 10000);
 
-// ریفریل کوڈ کاپی کرنے کا فنکشن
-function copyReferral() {
-  const code = document.getElementById('referralCode').innerText;
-  navigator.clipboard.writeText(code).then(function() {
-    alert('ریفریل کوڈ کاپی ہو گیا!');
-  }, function(err) {
-    alert('کاپی میں مسئلہ آیا: ' + err);
-  });
-}
-
-// روزانہ ودڈرال پروسس کرنے کا فنکشن
-function processWithdrawal() {
-  if (balance >= withdrawalAmount) {
-    balance -= withdrawalAmount;
-    document.getElementById('balance').innerText = balance;
-    document.getElementById('withdrawStatus').innerText = "Success: ودڈرال مکمل ہوا!";
-  } else {
-    document.getElementById('withdrawStatus').innerText = "Pending: بیلنس ناکافی ہے!";
-  }
-}
-
-// تصویر اپلوڈ اور preview کا فنکشن
-document.getElementById('photoInput').addEventListener('change', function(event) {
-  const file = event.target.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('photoPreview').innerHTML = '<img src="' + e.target.result + '" alt="Uploaded Photo">';
+function login() {
+    let username = document.getElementById("username").value;
+    if (username) {
+        document.getElementById("user").innerText = username;
+        document.getElementById("dashboard").classList.remove("hidden");
+        document.querySelector(".login-form").style.display = "none";
+        document.getElementById("referral").innerText = referralCode;
     }
-    reader.readAsDataURL(file);
-  }
-});
+}
+
+function invest() {
+    if (balance >= 10) {
+        balance -= 10;
+        document.getElementById("balance").innerText = balance;
+        alert("Investment Successful!");
+    } else {
+        alert("Insufficient Balance!");
+    }
+}
+
+function withdraw() {
+    let status = balance >= 50 ? "Success" : "Pending";
+    document.getElementById("withdraw-status").innerText = "Withdrawal Status: " + status;
+}
