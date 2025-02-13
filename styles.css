@@ -13,6 +13,10 @@ body {
     border-radius: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 input {
     display: block;
     width: 90%;
@@ -26,4 +30,5 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    margin: 5px;
 }
