@@ -80,13 +80,13 @@
     <h2>Account Sale</h2>
     <form id="saleForm">
       <label for="saleLvl">Account Level (Lvl):</label>
-      <input type="text" id="saleLvl" name="saleLvl" placeholder="Apna level darj karein" required>
+      <input type="text" id="saleLvl" name="saleLvl" placeholder="Alevel" required>
       
       <label for="saleEvo">Evo:</label>
-      <input type="text" id="saleEvo" name="saleEvo" placeholder="Evo details darj karein" required>
+      <input type="text" id="saleEvo" name="saleEvo" placeholder="Evo kitne ha" required>
       
-      <label for="saleKisper">Kis platform pe bani hai? (e.g., Facebook, VK, Twitter, Email):</label>
-      <input type="text" id="saleKisper" name="saleKisper" placeholder="Platform darj karein" required>
+      <label for="saleKisper">(id Kis pe bani ha):</label>
+      <input type="text" id="saleKisper" name="saleKisper" placeholder="linked ?" required>
       
       <label for="saleInfo">Additional Information:</label>
       <textarea id="saleInfo" name="saleInfo" placeholder="Koi extra maloomat"></textarea>
@@ -98,10 +98,10 @@
     <h2>Account Buy</h2>
     <form id="buyForm">
       <label for="buyRenge">Renge:</label>
-      <input type="text" id="buyRenge" name="buyRenge" placeholder="Renge darj karein" required>
+      <input type="text" id="buyRenge" name="buyRenge" placeholder="Renge" required>
       
       <label for="buyEvo">Evo Lvl:</label>
-      <input type="text" id="buyEvo" name="buyEvo" placeholder="Evo level darj karein" required>
+      <input type="text" id="buyEvo" name="buyEvo" placeholder="Evo kitne ho" required>
       
       <label for="buyIdType">Kis type ki ID chahiye?</label>
       <input type="text" id="buyIdType" name="buyIdType" placeholder="ID type darj karein" required>
@@ -110,13 +110,13 @@
     </form>
     
     <div class="report">
-      <p>Issue report karne ke liye email karein: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+      <p>Issue report  ke liye email karein: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
     </div>
   </div>
   
   <script>
     // WhatsApp number (use country code agar zaroorat ho, magar yahan as per aapka number)
-    const whatsappNumber = "03182898491";
+    const whatsappNumber = "923182898491";
     
     // Sale form submission: WhatsApp pe message send hoga
     document.getElementById("saleForm").addEventListener("submit", function(e) {
