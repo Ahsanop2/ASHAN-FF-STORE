@@ -1,141 +1,325 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahaan OP Seller</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Investment Work Earning - JazzCash &amp; Easypaisa</title>
   <style>
+    /* Global Styles */
     body {
-      font-family: 'Arial', sans-serif;
-      direction: rtl;
-      text-align: right;
-      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
       margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
+      padding: 0;
       color: #333;
     }
-    form {
-      margin-bottom: 40px;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    input[type="text"], textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    textarea {
-      resize: vertical;
-      height: 100px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    .report {
-      margin-top: 20px;
+    header {
+      background: #007bff;
+      color: #fff;
       text-align: center;
+      padding: 20px 0;
     }
-    .report a {
-      color: #007bff;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: auto;
+      padding: 20px 0;
+    }
+    .package-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .package-header h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .package-summary {
+      margin: 10px 0;
+      font-size: 1em;
+    }
+    .detail-btn {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-top: 10px;
+    }
+    .detail-content {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+    }
+    .payment-info {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .social-buttons a {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      margin: 5px;
       text-decoration: none;
+      border-radius: 3px;
     }
-    .report a:hover {
-      text-decoration: underline;
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .package-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .social-buttons {
+        flex-direction: column;
+      }
+      .social-buttons a {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Investment Work Earning</h1>
+    <p>JazzCash &amp; Easypaisa Packages</p>
+  </header>
+
   <div class="container">
-    <h1>Ahaan OP Seller</h1>
-    <p>Free Fire Account Sale aur Buy ke liye niche forms fill karein.</p>
-    
-    <!-- Sale Form -->
-    <h2>Account Sale</h2>
-    <form id="saleForm">
-      <label for="saleLvl">Account Level (Lvl):</label>
-      <input type="text" id="saleLvl" name="saleLvl" placeholder="Alevel" required>
-      
-      <label for="saleEvo">Evo:</label>
-      <input type="text" id="saleEvo" name="saleEvo" placeholder="Evo kitne ha" required>
-      
-      <label for="saleKisper">(id Kis pe bani ha):</label>
-      <input type="text" id="saleKisper" name="saleKisper" placeholder="linked ?" required>
-      
-      <label for="saleInfo">Additional Information:</label>
-      <textarea id="saleInfo" name="saleInfo" placeholder="Koi extra maloomat"></textarea>
-      
-      <button type="submit">Submit Sale</button>
-    </form>
-    
-    <!-- Buy Form -->
-    <h2>Account Buy</h2>
-    <form id="buyForm">
-      <label for="buyRenge">Renge:</label>
-      <input type="text" id="buyRenge" name="buyRenge" placeholder="Renge" required>
-      
-      <label for="buyEvo">Evo Lvl:</label>
-      <input type="text" id="buyEvo" name="buyEvo" placeholder="Evo kitne ho" required>
-      
-      <label for="buyIdType">Kis type ki ID chahiye?</label>
-      <input type="text" id="buyIdType" name="buyIdType" placeholder="ID type darj karein" required>
-      
-      <button type="submit">Submit Buy</button>
-    </form>
-    
-    <div class="report">
-      <p>Issue report  ke liye email karein: <a href="mailto:ahsanop32577@gmail.com">ahsanop32577@gmail.com</a></p>
+
+    <!-- Package 1: Rs500 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs500</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail1')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs65 | Total: Rs770 | Profit: Rs270
+      </div>
+      <div class="detail-content" id="detail1">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs65 | Total: Rs770 | Profit: Rs270</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Package 2: Rs1000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs1000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail2')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs110 | Total: Rs1540 | Profit: Rs540
+      </div>
+      <div class="detail-content" id="detail2">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs110 | Total: Rs1540 | Profit: Rs540</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 3: Rs2000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs2000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail3')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs210 | Total: Rs2940 | Profit: Rs940
+      </div>
+      <div class="detail-content" id="detail3">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs210 | Total: Rs2940 | Profit: Rs940</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 4: Rs3000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs3000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail4')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs310 | Total: Rs4340 | Profit: Rs1340
+      </div>
+      <div class="detail-content" id="detail4">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs310 | Total: Rs4340 | Profit: Rs1340</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 5: Rs5000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs5000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail5')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs510 | Total: Rs7140 | Profit: Rs2140
+      </div>
+      <div class="detail-content" id="detail5">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs510 | Total: Rs7140 | Profit: Rs2140</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 6: Rs7000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs7000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail6')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs710 | Total: Rs9940 | Profit: Rs2940
+      </div>
+      <div class="detail-content" id="detail6">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs710 | Total: Rs9940 | Profit: Rs2940</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 7: Rs10000 -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>PKG Rs10000</h2>
+        <button class="detail-btn" onclick="toggleDetail('detail7')">Detail</button>
+      </div>
+      <div class="package-summary">
+        Daily: Rs1010 | Total: Rs14140 | Profit: Rs4140
+      </div>
+      <div class="detail-content" id="detail7">
+        <p><strong>Package Details:</strong></p>
+        <p>Daily: Rs1010 | Total: Rs14140 | Profit: Rs4140</p>
+        <p><em>Note: Package lagane ke liye payment kare JazzCash ya Easypaisa me.</em></p>
+        <div class="payment-info">
+          <p><strong>Payment Details:</strong></p>
+          <p>1. JazzCash: 03182898491 (Nazeran Bibi)</p>
+          <p>2. Upaisa: 03182898491 (Nazeran Bibi)</p>
+          <p>3. Easypaisa: 03448089399 (Rasool Bakhsh)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 8: Higher Investment Packages -->
+    <div class="package-card">
+      <div class="package-header">
+        <h2>Higher Investment Packages</h2>
+      </div>
+      <div class="package-summary">
+        Packages available from Rs20k, Rs30k, Rs40k, Rs50k up to Rs100k &amp; Rs500k.
+      </div>
+      <p>For these packages, please contact us via our Help Line or WhatsApp.</p>
+    </div>
+
+    <!-- Social and Contact Buttons -->
+    <div class="social-buttons">
+      <a href="https://wa.me/923182898491" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a href="tel:03182898491">Help Line</a>
+    </div>
+
+    <!-- Contact Email -->
+    <div style="text-align: center; margin-top: 20px;">
+      <p>Email: <a href="mailto:Ahaanop32577@gmail.com">Ahaanop32577@gmail.com</a></p>
+    </div>
+
   </div>
-  
+
+  <footer>
+    <p>Agger koi Shikaayet hoto Help Line se raabta ker sakte ha. Shukriya.</p>
+  </footer>
+
   <script>
-    // WhatsApp number (use country code agar zaroorat ho, magar yahan as per aapka number)
-    const whatsappNumber = "923182898491";
-    
-    // Sale form submission: WhatsApp pe message send hoga
-    document.getElementById("saleForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const lvl = document.getElementById("saleLvl").value;
-      const evo = document.getElementById("saleEvo").value;
-      const kisper = document.getElementById("saleKisper").value;
-      const info = document.getElementById("saleInfo").value;
-      
-      const message = encodeURIComponent(
-        "Free Fire Account Sale Request:%0ALvl: " + lvl + 
-        "%0AEvo: " + evo + 
-        "%0AKisper: " + kisper + 
-        "%0AAdditional Info: " + info
-      );
-      window.open("https:/923182898491/wa.me/" + whatsappNumber + "?text=" + message, "_blank");
-    });
-    
-    // Buy form submission: WhatsApp pe message send hoga
-    document.getElementById("buyForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const renge = document.getElementById("buyRenge").value
+    function toggleDetail(id) {
+      var detail = document.getElementById(id);
+      if (detail.style.display === "none" || detail.style.display === "") {
+        detail.style.display = "block";
+      } else {
+        detail.style.display = "none";
+      }
+    }
+  </script>
+  
+</body>
+</html>
